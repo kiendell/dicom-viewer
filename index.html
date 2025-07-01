@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DICOM Viewer from ZIP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>DICOM ZIP Viewer</h1>
+
+    <div class="upload-section">
+      <input type="file" id="zipFile" accept=".zip" />
+      <label for="zipFile" class="upload-label">📂 Chọn file ZIP</label>
+    </div>
+
+    <div class="viewer-section">
+      <div id="dicomImage" class="dicom-box"></div>
+      <div class="toolbar">
+        <button id="prevBtn">◀️ Trước</button>
+        <button id="nextBtn">Tiếp ▶️</button>
+      </div>
+      <pre id="metadata" class="metadata-box">Chưa có ảnh</pre>
+    </div>
+  </div>
+
+  <script src="libs/jszip.min.js"></script>
+  <script src="libs/dicomParser.min.js"></script>
+  <script src="libs/cornerstone.min.js"></script>
+  <script src="libs/cornerstoneWADOImageLoader.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
